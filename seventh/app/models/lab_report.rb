@@ -1,0 +1,2 @@
+class LabReport < ApplicationRecord
+end

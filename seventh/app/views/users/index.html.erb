@@ -4,13 +4,26 @@
 
 <h1>Users</h1>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
-
 <%= link_to "New user", new_user_path %>
+
+<table id="users">
+  <thead>
+    <th>E-mail</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Link</th>
+  </thead>
+  <tboby>
+    <% @users.each do |user| %>
+      <tr>
+        <td> <%= user.email %> </td>
+        <td> <%= user.first_name %> </td>
+        <td> <%= user.last_name %> </td>
+        <td> <%= link_to "Show this user", user %> </td>
+      </tr>
+    <% end %>
+  </tboby>
+  
+</table>
+
+
